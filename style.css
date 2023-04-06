@@ -1194,7 +1194,7 @@ body {
   max-width: 1170px;
   padding: 0 15px;
   margin: 0 auto;
-  overflow: auto;
+  overflow: hidden;
   height: 100%;
   overflow-x: scroll;
 }
@@ -1210,7 +1210,7 @@ body {
   flex-wrap: nowrap;
   grid-gap: 50px;
   pointer-events: none;
-  width: max-content;
+  transition: transform 0.5s linear;
 }
 
 .testimontals-logo-container img {

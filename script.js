@@ -340,17 +340,9 @@ const projectSlides = projectSlider.querySelector('.projects-container')
 sliderShow(projectSlider, projectSlides)
 
 
-
-
-
-
-
-
-
-//temp
+//slide auto
 function sliderAuto(wrapperAuto, containerAuto, itemsAuto, time) {
-  var widthItem = itemsAuto[0].clientWidth + 10;
-  console.log
+  var widthItem = itemsAuto[0].clientWidth;
   var widthSlide = widthItem*itemsAuto.length;
   var i =0;
   // Auto
@@ -363,7 +355,7 @@ function sliderAuto(wrapperAuto, containerAuto, itemsAuto, time) {
   }, time);
 };
 
-function autoSlide(){
+(function (){
   const testimonialsWrapper = document.querySelector(".testimonials-wrapper");
   const testimonialsContainer = document.querySelector(".testimonials-container");
   const testimonialsItem = document.querySelectorAll(".testimonials-item");
@@ -373,6 +365,17 @@ function autoSlide(){
   function testimonials_slide() {
     sliderAuto(testimonialsWrapper, testimonialsContainer, testimonialsItem, 2000);
   }
-}
-autoSlide()
+})();
+
+(function (){
+  const testimonialsWrapper = document.querySelector(".testimontals-logo-wrapper");
+  const testimonialsContainer = document.querySelector(".testimontals-logo-container");
+  const testimonialsItem = testimonialsContainer.querySelectorAll("img");
+  document.addEventListener("DOMContentLoaded", function () {
+    testimonials_slide()
+  });
+  function testimonials_slide() {
+    sliderAuto(testimonialsWrapper, testimonialsContainer, testimonialsItem, 2000);
+  }
+})();
 
